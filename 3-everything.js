@@ -10,7 +10,7 @@ function every(array, test) {
     }
     return true;
 
-   /*
+   /* this doesn't work
     array.forEach(element => {
       if(!test(element)){
         return false;

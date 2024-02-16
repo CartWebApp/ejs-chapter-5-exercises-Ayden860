@@ -1,13 +1,16 @@
 let arrays = [[1, 2, 3], [4, 5], [6]];
 // Your code here.
 // let combination = arrays[0] + "," + arrays[1] + "," + arrays[2];
-let combination = [];
-/* This kinda works */
+// let combination = [];
+/* This kinda works
 for(let i = 0; i < arrays.length; i++)
 {
     combination += arrays[i] + ",";
 }
-// */
+*/
+function single(arr){
+  return arr.reduce((flat, array) => flat.concat(array), []);
+}
 // for (let char of arrays) {
 //     char += arrays
 //     console.log(char);
@@ -32,7 +35,9 @@ arrays.forEach(element => {
 });
 */
 // → [1, 2, 3, 4, 5, 6]
-console.log(combination);
+// console.log(combination);
+// console.log(arrays.reduce((flat, array) => flat.concat(array), []));
+console.log(single(arrays));
 
 /*  Use this to study
 const flatten = (arr) => {
